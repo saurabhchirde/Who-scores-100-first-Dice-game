@@ -190,7 +190,7 @@ main {
 .hidden {
   display: none;
 }
-.rule {
+.rule, .ruleBook {
   top: 1.5rem;
   position: absolute;
   font-size: 2rem;
@@ -199,6 +199,18 @@ main {
   font-weight: 300;
   margin-bottom: 1rem;
   color: rgb(255, 255, 255);
+}
+.ruleBook{
+  top: 5rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.2rem;  
+  border-radius: 30px;
+  cursor: pointer;  
+  color: rgb(255, 255, 255);
+  font-family: inherit;
+  transition: all 0.2s;
+  background-color: rgba(255, 255, 255, 0.4);
+
 }
 .wins {
   top: 25rem;

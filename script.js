@@ -14,6 +14,7 @@ const player0El = document.querySelector('.player--0');
 const player1El = document.querySelector('.player--1');
 const wins = document.querySelector('.wins');
 const btnw = document.querySelector('.btn--newwins');
+const ruleBook = document.querySelector('.ruleBook');
 
 // Initial values at starting new
 let player0name = prompt('Enter player 1 name');
@@ -46,6 +47,7 @@ const newgame = function () {
   playing = true;
   btnw.classList.add('hidden');
   btnNew.classList.remove('hidden');
+  ruleBook.classList.remove('hidden');
 };
 
 const switchpl = function () {
@@ -86,6 +88,7 @@ btnHold.addEventListener('click', function () {
       wins.classList.remove('hidden');
       btnw.classList.remove('hidden');
       btnNew.classList.add('hidden');
+      ruleBook.classList.add('hidden');
       winnername = document.getElementById(`name--${active}`).textContent;
       wins.textContent = `Congratulations ${winnername}! you won the game. 😃 `;
       document
@@ -100,7 +103,12 @@ btnHold.addEventListener('click', function () {
   }
 });
 
-// // Btn New
 btnNew.addEventListener('click', newgame);
 
 btnw.addEventListener('click', newgame);
+
+ruleBook.addEventListener('click', () => {
+  alert(
+    " 1. The player who rolls '1', will loose the current chance and the chance will be given to another player. \n 2. However you feel to hold the score, click on 'HOLD Score' and make the total score 100 first to win the game 🤩 "
+  );
+});
