@@ -116,6 +116,8 @@ main {
   padding: 0.7rem 2.5rem;
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  width: 220px;
+  padding: 10px 15px;
 }
 
 .btn::first-letter {
@@ -252,7 +254,10 @@ main {
     padding: 1.5rem 1.2rem;
   }
   .btn {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    border-radius: 50rem;
+    width: 220px;
+    padding: 10px 20px;
   }
   .btn--new {
     top: 4rem;
@@ -278,7 +283,7 @@ main {
   }
   .ruleBook {
     top: 5rem;
-    right: 25%;
+    right: 20%;
     font-size: 1rem;
   }
   .wins {
@@ -319,12 +324,14 @@ main {
   }
 
   .btn {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     border-radius: 50rem;
+    width: 200px;
+    padding: 12px 20px;
   }
 
   .btn::first-letter {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     display: inline-block;
     margin-right: 0.7rem;
   }
@@ -351,11 +358,11 @@ main {
   .rule,
   .ruleBook {
     top: 1.2rem;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   .ruleBook {
     top: 5rem;
-    right: 20%;
+    right: 10%;
     font-size: 1rem;
   }
 
