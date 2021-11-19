@@ -99,7 +99,6 @@ main {
   font-size: 3.5rem;
 }
 
-/* ABSOLUTE POSITIONED ELEMENTS */
 .btn {
   position: absolute;
   left: 50%;
@@ -107,17 +106,13 @@ main {
   color: #444;
   background: none;
   border: none;
-  font-family: inherit;
   font-size: 1.8rem;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 400;
   transition: all 0.2s;
-
-  background-color: white;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
-
   padding: 0.7rem 2.5rem;
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
@@ -140,7 +135,6 @@ main {
   color: rgb(38, 14, 255);
   background: none;
   border: none;
-  font-family: inherit;
   font-size: 1.8rem;
   text-transform: uppercase;
   cursor: pointer;
@@ -190,7 +184,8 @@ main {
 .hidden {
   display: none;
 }
-.rule, .ruleBook {
+.rule,
+.ruleBook {
   top: 1.5rem;
   position: absolute;
   font-size: 2rem;
@@ -200,17 +195,16 @@ main {
   margin-bottom: 1rem;
   color: rgb(255, 255, 255);
 }
-.ruleBook{
+.ruleBook {
   top: 5rem;
+  right: 25%;
   padding: 0.6rem 1.5rem;
-  font-size: 1.2rem;  
+  font-size: 1.2rem;
   border-radius: 30px;
-  cursor: pointer;  
+  cursor: pointer;
   color: rgb(255, 255, 255);
-  font-family: inherit;
   transition: all 0.2s;
   background-color: rgba(255, 255, 255, 0.4);
-
 }
 .wins {
   top: 25rem;
@@ -226,56 +220,26 @@ main {
   border-radius: 9px;
 }
 
-/* for mobile screen */
 @media screen and (max-width: 720px) {
-  /* LAYOUT */
-
   main {
-    position: relative;
-    width: 100%;
     height: 55rem;
-    background-color: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(200px);
-    filter: blur();
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
-    border-radius: 9px;
-    overflow: hidden;
-    display: flex;
   }
 
   .player {
-    flex: 30%;
     padding: 3rem 3rem 9rem 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all 0.75s;
   }
 
-  /* ELEMENTS */
   .name {
-    position: relative;
     font-size: 3rem;
     top: 8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    font-weight: 300;
-    margin-bottom: 1rem;
   }
 
   .score {
     position: relative;
-    font-size: 6rem;
+    font-size: 5rem;
     top: 10rem;
-    font-weight: 200;
-    color: #5f44d6;
-    margin-bottom: auto;
   }
 
-  .player--active {
-    background-color: rgba(255, 255, 255, 0.884);
-  }
   .player--active .name {
     font-weight: 500;
   }
@@ -283,176 +247,59 @@ main {
     font-weight: 300;
   }
 
-  .player--active .current {
-    opacity: 1;
-  }
-
   .current {
-    background-color: #873beb;
     margin: 0 0 50px 0;
-    opacity: 0.8;
-    border-radius: 9px;
-    color: #fff;
-    width: 70%;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.75s;
+    padding: 1.5rem 1.2rem;
   }
-
-  .current-label {
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    font-size: 1.7rem;
-    color: #ddd;
-  }
-
-  .current-score {
-    font-size: 3rem;
-  }
-
-  /* ABSOLUTE POSITIONED ELEMENTS */
   .btn {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgb(38, 14, 255);
-    background: none;
-    border: none
-    font-family: inherit;
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: 400;
-    transition: all 0.2s;
-
-    background-color: white;
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-
-    padding: 0.7rem 2rem;
-    border-radius: 50rem;
-    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
   }
-
-  .btn::first-letter {
-    font-size: 2rem;
-    display: inline-block;
-    margin-right: 0.7rem;
-  }
-
   .btn--new {
-    top: 0.5rem;
+    top: 4rem;
   }
   .btn--newwins {
-    top: 40rem;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgb(38, 14, 255);
-    background: none;
-    border: none;
-    font-family: inherit;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: 400;
-    transition: all 0.2s;
-
-    background-color: white;
-    backdrop-filter: blur(10px);
-
-    padding: 0.5rem 2.2rem;
-    border-radius: 50rem;
-    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+    top: 45rem;
   }
   .btn--roll {
-    top: 50rem;
+    top: 49rem;
   }
   .btn--hold {
-    top: 43.5rem;
-    /* padding: 0.5rem 1.2rem; */
-  }
-
-  .btn:active {
-    transform: translate(-50%, 3px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  }
-
-  .btn:focus {
-    outline: none;
+    top: 43rem;
   }
 
   .dice {
-    position: absolute;
-    left: 50%;
-    top: 20rem;
-    transform: translateX(-50%);
-    height: 7rem;
-    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.384);
+    top: 18rem;
+    height: 8rem;
   }
-
-  .player--winner {
-    background-color: #2b2b2b;
+  .rule,
+  .ruleBook {
+    top: 1rem;
+    font-size: 1.8rem;
   }
-
-  .player--winner .name {
-    font-weight: 700;
-    color: #9c8aec;
-  }
-  .hidden {
-    display: none;
-  }
-  .rule, .ruleBook {
-    top: 1.5rem;
-    position: absolute;
-    font-size: 2rem;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    font-weight: 300;
-    margin-bottom: 1rem;
-    color: rgb(255, 255, 255);
-  }
-  .ruleBook{
+  .ruleBook {
     top: 5rem;
-    padding: 0.6rem 1.5rem;
-    font-size: 1.2rem;  
-    border-radius: 30px;
-    cursor: pointer;  
-    color: rgb(255, 255, 255);
-    font-family: inherit;
-    transition: all 0.2s;
-    background-color: rgba(255, 255, 255, 0.4);
-  
+    right: 25%;
+    font-size: 1rem;
   }
   .wins {
-    top: 17rem;
-    position: fixed;
+    top: 15rem;
     font-size: 2.7rem;
-    padding: 5rem;
+    padding: 6rem;
     width: 42rem;
-    height: 40rem;
-    color: #3e2a99;
-    background-color: rgb(168, 203, 255);
-    backdrop-filter: blur(200px);
-    filter: blur();
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
-    border-radius: 9px;
+    height: 42rem;
   }
 }
 
 @media screen and (max-width: 450px) {
-  /* LAYOUT */
-
-  main {    
-    height: 55rem;    
+  main {
+    height: 55rem;
   }
 
   .player {
     flex: 30%;
-    padding: 3rem 1rem 9rem 1rem;    
+    padding: 3rem 1rem 9rem 1rem;
   }
 
-  /* ELEMENTS */
   .name {
     font-size: 2.4rem;
   }
@@ -477,7 +324,7 @@ main {
   }
 
   .btn::first-letter {
-    font-size: 2.1rem;
+    font-size: 1.5rem;
     display: inline-block;
     margin-right: 0.7rem;
   }
@@ -490,7 +337,6 @@ main {
   }
   .btn--hold {
     top: 43.5rem;
-    /* padding: 0.5rem 1.2rem; */
   }
 
   .btn:active {
@@ -502,15 +348,17 @@ main {
     outline: none;
   }
 
-  .rule, .ruleBook {
+  .rule,
+  .ruleBook {
     top: 1.2rem;
     font-size: 1.4rem;
   }
-  .ruleBook{
+  .ruleBook {
     top: 5rem;
-    right: 1rem;
-    font-size: 1rem;    
+    right: 20%;
+    font-size: 1rem;
   }
+
   .wins {
     top: 15rem;
     font-size: 2.7rem;
