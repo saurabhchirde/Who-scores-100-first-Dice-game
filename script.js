@@ -31,7 +31,8 @@ let playing = true;
 
 document.getElementById('name--0').textContent = player0name;
 document.getElementById('name--1').textContent = player1name;
-const newgame = function () {
+
+const newgame = () => {
   document.querySelector('.player--0').classList.remove('player--winner');
   document.querySelector('.player--1').classList.remove('player--winner');
   document.querySelector('.player--0').classList.add('player--active');
@@ -50,7 +51,7 @@ const newgame = function () {
   ruleBook.classList.remove('hidden');
 };
 
-const switchpl = function () {
+const switchpl = () => {
   document.getElementById(`current--${active}`).textContent = 0;
   currentScore = 0;
   active = active === 0 ? 1 : 0;
@@ -59,7 +60,7 @@ const switchpl = function () {
 };
 
 // Btn ROll
-btnRoll.addEventListener('click', function () {
+btnRoll.addEventListener('click', () => {
   if (playing) {
     // random number print on current score & roll dice with that random number
     const dice = Math.trunc(Math.random() * 6) + 1;
@@ -78,7 +79,7 @@ btnRoll.addEventListener('click', function () {
 // // Btn Hold
 let winnername = '';
 
-btnHold.addEventListener('click', function () {
+btnHold.addEventListener('click', () => {
   if (playing) {
     scores[active] += currentScore;
     document.getElementById(`score--${active}`).textContent = scores[active];
